@@ -33,16 +33,16 @@ def run_game(
 
     is_running = True
     while is_running:
+        dt = clock.tick(timing.fps) / 1000
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
                 is_running = False
                 break
             manager.handle_event(event)
 
-        manager.update(clock.get_time() / 1000)
+        manager.update(dt)
         screen.fill(window.background_color)
         manager.draw(screen)
         pygame.display.flip()
-        clock.tick(timing.fps)
 
     pygame.quit()

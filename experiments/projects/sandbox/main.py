@@ -4,8 +4,20 @@ from __future__ import annotations
 
 import pygame
 
+# Allow running as a module (`python -m experiments.projects.sandbox.main`) or directly
+# as a script (`python experiments/projects/sandbox/main.py`).
+if __package__ in (None, ""):
+    # When executed directly, ensure the repository root is on sys.path so
+    # absolute imports from the experiments package succeed.
+    import sys
+    from pathlib import Path
+
+    repo_root = Path(__file__).resolve().parents[2]
+    if str(repo_root) not in sys.path:
+        sys.path.insert(0, str(repo_root))
+
 from experiments.common import TimingSettings, WindowSettings, run_game
-from .scenes import SandboxScene
+from experiments.projects.sandbox.scenes import SandboxScene
 
 
 def launch() -> None:
