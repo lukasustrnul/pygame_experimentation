@@ -6,7 +6,7 @@ from dataclasses import dataclass
 
 import pygame
 
-from pygame_experimentation.common import Scene
+from experiments.common import Scene
 
 
 @dataclass(slots=True)

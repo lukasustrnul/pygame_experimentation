@@ -4,7 +4,7 @@ from __future__ import annotations
 
 import pygame
 
-from pygame_experimentation.common import TimingSettings, WindowSettings, run_game
+from experiments.common import TimingSettings, WindowSettings, run_game
 from .scenes import SandboxScene
 
 
