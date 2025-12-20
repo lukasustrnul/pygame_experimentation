@@ -9,8 +9,8 @@ from dataclasses import dataclass
 class WindowSettings:
     """Basic window settings used when creating a pygame display surface."""
 
-    width: int = 800
-    height: int = 600
+    width: int = 1280
+    height: int = 720
     title: str = "Pygame Experiment"
     background_color: tuple[int, int, int] = (30, 30, 30)
 
